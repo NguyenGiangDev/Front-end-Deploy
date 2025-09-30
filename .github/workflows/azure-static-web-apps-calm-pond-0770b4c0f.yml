@@ -44,7 +44,8 @@ jobs:
           ###### Repository/Build Configurations ######
           app_location: "/"        # Source code path (nơi chứa Wellcome_page.html, Login.html, v.v.)
           api_location: ""         # Không dùng API
-          output_location: ""     # Static content nằm ngay root
+          output_location: "" 
+          skip_app_build: true    # 🚀 ép skip build, không gọi Oryx
           app_build_command: ""    # Bỏ qua bước build (không cần Node.js)
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End Configurations ######
