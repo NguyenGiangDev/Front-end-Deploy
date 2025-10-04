@@ -206,7 +206,7 @@
   // Lấy số dư khi load trang
   window.addEventListener('DOMContentLoaded', () => {
     if (username && phone_number) {
-      fetch('https://3c1b49558f35.ngrok-free.app/api/get-balance', {
+      fetch('https://unriveted-defectible-brodie.ngrok-free.dev/api/get-balance', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, phone_number })
@@ -279,7 +279,7 @@ openAnalysisBtn.addEventListener('click', async () => {
 
   async function fetchCombinedHistory() {
         try {
-            const response = await fetch('https://3c1b49558f35.ngrok-free.app/api/get-combined-history', {
+            const response = await fetch('https://unriveted-defectible-brodie.ngrok-free.dev/api/get-combined-history', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify({ username, phone_number })
@@ -461,7 +461,7 @@ confirmDepositBtn.addEventListener('click', () => {
   const transaction_time = getVietnamTimeISO(); 
 
   // Gọi API để thực hiện nạp tiền và ghi lịch sử 
-  fetch('https://3c1b49558f35.ngrok-free.app/api/deposit', {
+  fetch('https://unriveted-defectible-brodie.ngrok-free.dev/api/deposit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -495,7 +495,7 @@ confirmDepositBtn.addEventListener('click', () => {
     depositModal.style.display = 'none';
 
     // Gửi thêm lịch sử nạp tiền sau khi nạp thành công
-    fetch('https://3c1b49558f35.ngrok-free.app/api/add-history', {
+    fetch('https://unriveted-defectible-brodie.ngrok-free.dev/api/add-history', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -545,7 +545,7 @@ confirmUserBtn.addEventListener('click', () => {
     alert("Vui lòng nhập số điện thoại người nhận!");
     return;
   }
-  fetch('https://3c1b49558f35.ngrok-free.app/api/confirm-user', {
+  fetch('https://unriveted-defectible-brodie.ngrok-free.dev/api/confirm-user', {
     method: 'POST',
     headers: {'Content-type': 'application/json'},
     body: JSON.stringify({ phone_number: receiverPhone })
@@ -583,7 +583,7 @@ confirmTransferBtn.addEventListener('click', () => {
   alert(`Bạn xác nhận chuyển ${amount} VNĐ cho người dùng có số điện thoại ${receiverPhone}`);
   transferModal.style.display = 'none';
 
-  fetch('https://3c1b49558f35.ngrok-free.app/api/transfer', {
+  fetch('https://unriveted-defectible-brodie.ngrok-free.dev/api/transfer', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
